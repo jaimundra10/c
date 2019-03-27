@@ -1,32 +1,8 @@
-#include<stdio.h>
-#include"i.h"
-int main()
-{
-
-    int p,q,r;
-
-    for(int i=0;i<50;i++)
-    {
-        if(a[i]==a[i+1])
-        {
-           p++;
-
-           printf("sample no:%d || voltage level:%d || level\n ",i,a[i]);
-        }
-        else if(a[i]==0&&a[i+1]==1)
-        {
-           q++;
-           printf("sample no:%d || voltage level:%d || rising\n ",i,a[i]);
-        }
-        else
-        {
-            r++;
-           printf("sample no:%d || voltage level:%d || falling \n",i,a[i]);
-        }
-
-
-    }
-}
-
-​
-
+1. language: c
+2. sudo: false # only for faster builds
+3. compiler: 
+4. - clang
+5. - gcc
+6. script:
+7. - gcc -o test ddd.c // we can use gcc instead of clang too
+8. - ./test 
